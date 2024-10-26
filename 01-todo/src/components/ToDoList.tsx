@@ -1,4 +1,5 @@
 import { ToDoItem } from "./ToDoItem";
+import styles from "../styles/todoList.module.scss";
 
 interface ToDoListProps {
   tasks: {
@@ -13,7 +14,7 @@ interface ToDoListProps {
 
 export function ToDoList({ tasks, deleteItem, checkItem }: ToDoListProps) {
   return (
-    <div>
+    <div className={styles.ToDoList}>
       <ul>
         {tasks.map((task, index) => (
           <li key={index}>

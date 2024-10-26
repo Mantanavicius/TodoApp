@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import styles from "../styles/Input.module.scss";
 
 interface InputProps {
   newTask: (value: string) => void;
@@ -14,11 +15,11 @@ export function Input({ newTask }: InputProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    newTask(text);
+    text && newTask(text);
     setText("");
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.Input}>
       <input
         type="text"
         ref={inputRef}

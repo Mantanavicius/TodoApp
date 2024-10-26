@@ -1,5 +1,5 @@
 import { Task } from '../Task';
-import styles from "./Statistics.module.scss";
+import styles from "../styles/Statistics.module.scss";
 
 interface StatisticsProps {
     tasks: Task[];

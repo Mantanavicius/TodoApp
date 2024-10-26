@@ -1,3 +1,4 @@
+@use "./mixins" as mixins;
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap");
 
 .AppContainer {
@@ -6,26 +7,34 @@
   align-items: center;
   padding: 20px;
   font-family: "Noto Sans", sans-serif;
+  button {
+    @include mixins.Button;
+  }
 }
 
 .App {
-  background: #fff;
+  background: #f5f5f5;
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
   min-width: 340px;
-  min-height: 640px;
+  min-height: 720px;
   border: 2px solid inset #747474;
   box-shadow: #b4b4b4 0px 0px 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .Header {
-  background: #b6b6b6;
-  color: #313131;
+  background: #4d4d4d;
+  color: #a3a3a3;
   font-weight: 800;
   padding: 20px;
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Pacifico", cursive;
+  user-select: none;
+}
+
+.Tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }

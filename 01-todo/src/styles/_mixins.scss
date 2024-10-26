@@ -1,0 +1,19 @@
+@mixin Button {
+  padding: 10px;
+  border: none;
+  background: #5c5c5c;
+  color: #ececec;
+  font-weight: 800;
+  font-size: 18px;
+  font-family: "Pacifico", cursive;
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:hover {
+    background: #8a8a8a;
+  }
+
+  &:active {
+    background: #4d4d4d;
+  }
+}
